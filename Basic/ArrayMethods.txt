@@ -1,0 +1,91 @@
+using System;
+using System.Linq;
+
+namespace Basic
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            //Array declare and initialize 
+            int[] arr = { 5,4,8,2,3,4,8,9,1};
+            int[,] arr2 = { { 10, 20, 30 }, { 40, 50, 60 } };
+
+            //Array print
+            Console.Write("The Unsorted array(Array_1) is : ");
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.Write(arr[i] + " ");
+            }
+
+            Console.WriteLine("\n\n");
+
+            Console.WriteLine("The unsorted array (Array_2) is : ");
+            for(int i = 0;i<arr2.GetLength(0); i++)
+            {
+                for(int j = 0; j < arr2.GetLength(1); j++)
+                {
+                    Console.Write(arr2[i,j] + " ");
+                }
+                Console.WriteLine();
+            }
+
+            Console.WriteLine("\n\n");
+
+            //Find the Array length
+            Console.WriteLine("Length of Array_1 : " + arr.Length);
+            Console.WriteLine("Row size of Array_2 : "+arr2.GetLength(0));
+            Console.WriteLine("Column size of Array_2 : "+arr2.GetLength(1));
+
+            Console.WriteLine("\n\n");
+
+            //Find array rank 
+            Console.WriteLine("Rank of Array_1 : " + arr.Rank); //rank = Dimensotional
+            Console.WriteLine("Rank of Array_2 : " + arr2.Rank);
+
+            Console.WriteLine("\n\n");
+
+            //find the max,min,sum,average
+            Console.WriteLine("Max value of Array_1 : " + arr.Max());
+            Console.WriteLine("Min value of Array_1 : " + arr.Min());
+            Console.WriteLine("Sum of Array_1 : " + arr.Sum());
+            Console.WriteLine("Average of Array_1 : " + arr.Average());
+
+            Console.WriteLine("\n\n");
+
+            //array sortig and print
+            Array.Sort(arr);
+            Console.Write("The sorted array(Array_1) is : ");
+            for (int i=0; i<arr.Length; i++)
+            {
+                Console.Write(arr[i]+" ");  
+            }
+
+            Console.WriteLine("\n\nThe index of 3 in Array_1 : " + Array.IndexOf(arr, 3));
+
+
+            Console.WriteLine("\n\n");
+
+            //Copy the array 
+            int[] copyArr = new int[arr.Length];
+            Array.Copy(arr,copyArr,arr.Length);
+
+            //Copy Array print 
+            Console.Write("The Copied Array is : ");
+            for (int i = 0; i < copyArr.Length; i++)
+            {
+                Console.Write(copyArr[i] + " ");
+            }
+
+            //Clear some element : 
+            Array.Clear(arr,0, arr.Length); //all the value replaced by 0 
+            Console.Write("\n\nAfter clear some element : ");
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.Write(arr[i] + " ");
+            }
+
+            Console.ReadKey();
+        }
+    }
+}

@@ -1,0 +1,28 @@
+using System;
+
+namespace Basic
+{
+    public class Program
+    {
+        public static void Method (ref int x)
+        {
+            x = x + 10; 
+        }
+
+        public static void Main (string[]args)
+        {
+            int x = 7;
+
+            Console.WriteLine($"The initial value is : {x}");   
+
+            Method (ref x);
+
+            Console.WriteLine($"The updated value is : {x}");
+
+            Console.ReadKey();
+        }
+    }
+}
+
+
+//it  a approch of call by reference .

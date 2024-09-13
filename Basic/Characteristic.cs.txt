@@ -1,0 +1,18 @@
+
+using System;
+
+namespace Basic
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            Console.WriteLine("C# is an Object Oriented programming language.");
+            Console.WriteLine("It is a general purpose and type safe language.");
+            Console.WriteLine("It is a CrossPlatform or Platform independent language.");
+            Console.WriteLine("The frame work of C# is .NET , we can use it as a Backend language.\n\n\n");
+
+            Console.ReadKey();
+        }
+    }
+}

@@ -1,0 +1,60 @@
+
+using System;
+
+namespace Basic
+{
+    public class Program
+    {
+        public static void Main (string[] args)
+        {
+            int i , arrSize;
+
+            Console.Write("Enter the array size : ");
+            arrSize = int.Parse(Console.ReadLine());    
+
+            int[] arr = new int[arrSize];
+
+            Console.WriteLine("\n\n");
+
+            //'array' input : 
+
+            for (i=0; i<arr.Length; i++)
+            {
+                Console.Write($"Enter the value of arr[{i}] : ");
+                arr[i] = int.Parse(Console.ReadLine());
+            }
+
+            Console.WriteLine("\n\n");
+
+            Console.WriteLine("First way of print : ");
+            for(i=0; i<arr.Length; i++)
+            {
+                Console.WriteLine($"arr[{i}] = {arr[i]}");
+            }
+
+            Console.WriteLine("\n\n");
+
+            Console.WriteLine("Second way of print : ");
+            i = 0 ;
+            do
+            {
+                Console.WriteLine($"arr[{i}] = {arr[i]}");
+
+                i++; 
+            } while (i < arr.Length);
+
+            Console.WriteLine("\n\n");
+
+            i = 0;
+            Console.WriteLine("Thired way of print :  ");
+            foreach (int v in arr)
+            {
+                Console.WriteLine($"arr[{i}] = {v}");
+                i++;
+            }
+
+
+            Console.ReadKey();  
+        }
+    }
+}

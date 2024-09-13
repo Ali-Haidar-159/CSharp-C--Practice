@@ -1,0 +1,45 @@
+
+using System;
+
+namespace Basic
+{
+    public class Program
+    {
+        public static void Main (string[] args)
+        {
+            System.Int32 number = default;
+
+            myLabel: 
+
+            Console.Write("Enter the number to check : ");
+            number = System.Int32.Parse(Console.ReadLine());
+
+            if(number == 0 || number == 1 || number == 2)
+            {
+                Console.WriteLine("Invalid Number . Please enter the correct number .");
+
+                goto myLabel;
+            }
+
+            int i = 2 , flag=0 ;
+
+            while(i<number)
+            {
+                if (number % 2 == 0)
+                {
+                    flag++;
+                    break ;
+                }
+                i++;
+            }
+
+            if (flag != 0)
+                Console.WriteLine($"{number} is not a prime number");
+            else
+                Console.WriteLine($"{number} is a prime number");
+
+
+            Console.ReadKey();
+        }
+    }
+}

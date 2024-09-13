@@ -1,0 +1,26 @@
+
+using System;
+
+namespace Basic
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            System.Int16 i, lastNumber = default;
+            System.Int32 sum = 0;
+
+            Console.Write("Enter the last number : ");
+            lastNumber = Convert.ToInt16(Console.ReadLine());
+
+            for (i = 0; i <= lastNumber; i++)
+            {
+                sum += i;
+            }
+
+            Console.WriteLine($"The sum of first {i} number is : {sum} ");
+
+            Console.ReadKey();
+        }
+    }
+}

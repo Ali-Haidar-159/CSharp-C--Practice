@@ -1,0 +1,32 @@
+using System;
+
+namespace Basic
+{
+    public class Program
+    {
+        public static void Main (string[] args)
+        {
+            int dayNumber = default;  // or simply int dayNumber;
+            string dayName = default; // or simply string dayName;
+
+            Console.Write("Enter the day number: ");
+            dayNumber = Convert.ToInt32(Console.ReadLine());
+
+            dayName = dayNumber switch
+            {
+                1 => "Saturday",
+                2 => "Sunday",
+                3 => "Monday",
+                4 => "Tuesday",
+                5 => "Wednesday", // Fixed spelling
+                6 => "Thursday",  // Fixed spelling
+                7 => "Friday",
+                _ => "Invalid day number."
+            };
+
+            Console.WriteLine("The day name is: " + dayName);
+
+            Console.ReadKey();
+        }
+    }
+}

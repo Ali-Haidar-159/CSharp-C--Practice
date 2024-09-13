@@ -1,0 +1,18 @@
+
+namespace Basic
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            System.Console.WriteLine("Alhamdulliah");
+
+            System.Console.WriteLine("C# is a high lavel programming language.");
+            System.Console.Write("It develops by the Microsoft.");
+            System.Console.Write("This language publicly realesed in 2002.");
+            System.Console.Write("The latest version of C# is C#12 which is realesed in 2023.");
+
+            System.Console.ReadKey();
+        }
+    }
+}

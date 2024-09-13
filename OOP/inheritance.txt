@@ -1,0 +1,79 @@
+using System;
+
+namespace Basic
+{
+    class Person
+    {
+        public string name = default;
+        public int id = default;
+
+        public void Msg ()
+        {
+            Console.WriteLine("This is parent/super/base class");
+        }
+
+    }
+
+    class Teacher : Person
+    {
+        //name , id ,  Msg
+
+        public string position = default ;
+
+        public Teacher()
+        {
+
+        }
+
+        public Teacher(string name, int id, string position)
+        {
+            this.name = name; 
+            this.id = id;
+            this.position = position;
+        }
+
+        public void Msg()
+        {
+            Console.WriteLine("This is child/sub/derived class");
+        }
+
+        public void Display ()
+        {
+            Console.WriteLine("\nname : " + name);
+            Console.WriteLine("id : " + id);
+            Console.WriteLine("Position : " + position + "\n");
+        }
+
+    }
+
+    public class Program
+    {
+        public static void Main (string [] args)
+        {
+            string name, position;
+            int id , numberOfTeacher;
+
+            Console.Write("How many teacher you want to add : ");
+            numberOfTeacher = Convert.ToInt32(Console.ReadLine());
+
+            int i;
+
+            for(i=0; i<numberOfTeacher;i++)
+            {
+                Console.Write("Enter you  name : ");
+                name = Console.ReadLine();
+                Console.Write("Enter your id : ");
+                id = int.Parse(Console.ReadLine());
+                Console.Write("Enter your position : ");
+                position = Console.ReadLine();
+
+                Teacher t1 = new Teacher (name,id,position);
+                //t1.Msg();
+                t1.Display();
+            }
+
+            Console.ReadKey();
+
+        }
+    }
+}

@@ -1,0 +1,43 @@
+using System; 
+
+namespace Basic
+{
+    interface IPerson
+    {
+        //abstract method 
+        void display();
+    }
+
+    class Person2 : IPerson
+    {
+        // display () 
+
+        public string name;
+        public int id;
+
+        public Person2()
+        {
+            Console.Write("Enter your name : ");
+            this.name = Console.ReadLine();
+            Console.Write("Enter your id : ");
+            this.id = int.Parse(Console.ReadLine());
+        }
+
+        public void display ()
+        {
+            Console.WriteLine("\n\nName : " + name);
+            Console.WriteLine("ID : " + id);
+        }
+    }
+
+    public class Program
+    {
+        public static void Main (string [] args)
+        {
+            Person2 person = new Person2();
+            person.display();
+
+            Console.ReadKey();
+        }
+    }
+}

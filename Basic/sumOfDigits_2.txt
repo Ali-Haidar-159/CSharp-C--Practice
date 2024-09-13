@@ -1,0 +1,32 @@
+
+using System;
+using System.Diagnostics.CodeAnalysis;
+
+namespace Basic
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            int number = default, sum = 0;
+
+            Console.WriteLine("To stop the input , Enter -1 . ");
+
+            while(true)
+            {
+                Console.Write("Enter number : ");
+
+                number = int.Parse(Console.ReadLine());
+
+                if (number == -1)
+                    break;
+
+                sum += number;
+            }
+
+            Console.WriteLine("The sum is : " + sum);
+
+            Console.ReadKey();
+        }
+    }
+}

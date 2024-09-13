@@ -1,0 +1,77 @@
+using System;
+using System.ComponentModel;
+
+namespace Basic
+{
+    class Person
+    {
+        public string name; 
+        public int age; 
+
+        public Person(string name, int age)
+        {
+            this.name = name;
+            this.age = age;
+        }
+
+        public void Display ()
+        {
+            Console.WriteLine("\nName : "+name);
+            Console.WriteLine("Age : "+age);
+        }
+    }
+
+    class Teacher : Person
+    {
+        //name , age , Display() 
+
+        public int id; 
+
+        // constructor chainning
+        public Teacher(string name ,int age ,int id) : base(name , age)  
+        {
+            this.id = id;
+        }
+
+        //override
+        public void Display ()
+        {
+            base.Display();
+            Console.WriteLine("Id : " + id);
+        }
+    }
+
+    public class Program
+    {
+        public static void Main (string [] args)
+        {
+            //Normal way :
+            Teacher t1 = new Teacher("Ali", 20, 10101);
+            t1.Display();
+
+            //Polymorphismj concept : 
+            Person p1 = new Teacher("Haidar", 22 , 10210);
+            t1.Display();
+
+            //Upcasting :  
+            Teacher t2 = new Teacher("Kamal", 24, 11101);
+            Person p2 = t2;
+            p2.Display();
+
+            //Downcasting :  
+            Person p3 = new Person("Jabbar", 25);
+            try
+            {
+                Teacher t3 = (Teacher)p3; // This will throw InvalidCastException at runtime
+                t3.Display();
+            }
+            catch (InvalidCastException ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+
+
+            Console.ReadKey();
+        }
+    }
+}

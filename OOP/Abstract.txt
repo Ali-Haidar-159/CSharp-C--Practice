@@ -1,0 +1,63 @@
+using System;
+
+namespace Basic
+{
+    public class Program
+    {
+        abstract class Person
+        {
+            public string name;
+            public int id;
+
+            public Person(string name, int id)
+            {
+                this.name = name;
+                this.id = id;
+            }
+
+            //normal method 
+            public void msg()
+            {
+                Console.WriteLine("this is normal method");
+            }
+
+            //abstract method 
+
+            abstract public void Display();
+        }
+
+        class Teacher : Person
+        {
+            //name , id , msg , Display
+
+            public string position; 
+
+            public Teacher (string name , int id , string position) : base(name , id)
+            {
+                this.position = position;
+            }
+
+            //override the display method becoz it is an abstract method
+
+            public override void Display()
+            {
+                Console.WriteLine("\n\nName : " + name);
+                Console.WriteLine("id : " + id);
+                Console.WriteLine("Position : "+position);
+            }
+        }
+
+        public static void Main (string [] args)
+        {
+            Teacher t1 = new Teacher ("Ali",101,"Manager");
+            t1.Display();
+            t1.msg();
+
+            Person p1 = new Teacher("haidar",102,"faculty");
+            p1.Display();
+            p1.msg();
+
+            Console.ReadKey();
+        }
+    }
+}

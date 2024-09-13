@@ -1,0 +1,52 @@
+
+using System;
+
+namespace Basic
+{
+    public class Program
+    {
+        public static void Main (string[] args)
+        {
+            int i, j , row , column ;
+
+            Console.Write("Enter the row size : ");
+            row = int.Parse(Console.ReadLine());
+
+
+            int[][] arr = new int[row][];
+
+            for(i=0; i<row; i++)
+            {
+                Console.Write($"Enter the colum number of arr[{i}] row : ");
+                column = int.Parse(Console.ReadLine());
+
+                arr[i] = new int[column];
+            }
+
+
+            //input in the array : 
+
+            for (i=0; i<arr.Length; i++)
+            {
+                for (j=0; j<arr[i].Length; j++)
+                {
+                    Console.Write($"Enter arr[{i}][{j}] : ");
+                    arr[i][j] = int.Parse(Console.ReadLine());
+                }
+            }
+
+            Console.WriteLine("\n\n");
+
+            //print the arry : 
+
+            for (i=0; i<arr.Length; i++)
+            {
+                for (j=0; j<arr[i].Length;j++)
+                {
+                    Console.Write(" " + arr[i][j]);
+                }
+                Console.WriteLine();
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+
+using System;
+
+namespace Basic
+{
+    public class Program
+    {
+        public static void Main (string[] args)
+        {
+            Object a = 10;
+            var b = 20;
+            int c = 30;
+
+
+            
+
+            Console.WriteLine("a : " + a);
+            Console.WriteLine("b : " + b); 
+            Console.WriteLine("c : " + c);
+
+            Console.WriteLine("\n\n");
+
+            Console.WriteLine("Type of a: " + a.GetType());
+            Console.WriteLine("Type of b: " + b.GetType());
+            Console.WriteLine("Type of c: " + c.GetType());
+
+            Console.WriteLine("\n\n");
+
+
+        }
+    }
+}

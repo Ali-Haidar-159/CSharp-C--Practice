@@ -1,0 +1,68 @@
+
+using System;
+using System.ComponentModel;
+
+namespace Basic_
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            /*ere are 2 way to declare a variable
+             1.NOrmal process
+             2.System process
+             */
+
+
+            //Normal Way  :
+
+            Console.WriteLine("\t\t\t This is Normal Way to declare a variable\n\n");
+
+            int a = 10;
+            int b = 20;
+            int result = default ;
+
+            result = a+ b ;
+            Console.WriteLine("The first result is (normal int) : "+result);
+
+
+            float m = 10.5f;
+            float n = 6f;
+            double result2 = default ;
+
+            result2 = m / n;
+            Console.WriteLine($"The second result is (normal float and double) : {result2}");
+
+            char c1 = 'Z';
+            bool b1  = true;
+
+            Console.WriteLine($"{c1} is not {b1} . ");
+
+            //System Way :
+
+            Console.WriteLine("\t\t\t This is System Way to declare a variable\n\n");
+
+            System.Int32 x = 5; //int data type 
+            System.Int32 y = 10;   
+            System.Int32 result3 = default;
+
+            result3 = x * y;
+            Console.WriteLine($"The third result is (system int) : {result3}");    
+
+            
+            System.Single p = 10.5f; //float data type 
+            System.Single q = 6f;
+            System.Double result4 = default; //double data type 
+
+            result4 = p / q;
+            Console.WriteLine($"The forth result is (sytem float and double) : {result4}");
+
+            System.Char c2 = 'Z';
+            System.Boolean b2 = true;
+
+            Console.WriteLine($"{c2} is not {b2}");
+
+            Console.ReadKey();
+        }
+    }
+}

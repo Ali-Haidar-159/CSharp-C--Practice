@@ -1,0 +1,40 @@
+using System;
+using System.Text;
+
+namespace Basic
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            //we can create string in 2 ways : 1.string datatype 2.StringBuilder class
+            string s1 = "My name is Ali Haidar";
+            StringBuilder s2 = new StringBuilder("My name is Ali Haidar 2");
+
+            //print the string 
+            Console.WriteLine("String 1 : " + s1);
+            Console.WriteLine("String 2 : " + s2);
+
+            Console.WriteLine("\n\n");
+
+            Console.WriteLine("The length : " + s1.Length);
+            Console.WriteLine("The upper case : " + s1.ToUpper());
+            Console.WriteLine("The lower case : " + s1.ToLower());
+            Console.WriteLine("After remove the space or triming : " + s1.Trim());
+            Console.WriteLine("After insert 'hi' : " + s1.Insert(0, "Hi !"));
+
+            String str = s1.Replace("Hello", "hi");
+            Console.WriteLine("Replace the 'Hi' word with 'Hello' : " + str);
+
+            bool b = s1.Contains("Haidar");
+            Console.WriteLine("is string contains the 'Haidar' word : " + b);
+
+            string[] words = s1.Split(' ');
+            Console.WriteLine("After split : ");
+            foreach (string word in words)
+            {
+                Console.WriteLine(word+" ");
+            }
+        }
+    }
+}

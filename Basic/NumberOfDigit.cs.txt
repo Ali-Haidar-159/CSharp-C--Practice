@@ -1,0 +1,31 @@
+
+using System;
+
+namespace Basic
+{
+    public class Program
+    {
+        public static void Main (string[] args)
+        {
+            int number=default , numOfDigit=0 , digit=0  ;
+
+            Console.Write("Enter a number : ");
+            number = int.Parse(Console.ReadLine());
+
+            while(number >0)
+            {
+                digit = number % 10;
+
+                Console.Write($"{digit} ");
+
+                number = number / 10;
+                numOfDigit++;
+            }
+
+            Console.WriteLine("\n\nDigit : " + numOfDigit);
+
+            Console.ReadKey();
+
+        }
+    }
+}

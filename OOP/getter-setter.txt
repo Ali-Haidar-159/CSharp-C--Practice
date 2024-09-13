@@ -1,0 +1,96 @@
+using System;
+using System.Security.Principal;
+
+namespace Basic
+{
+    class Person
+    {
+        string name = default;
+        int id = default;
+        double salary = default;
+
+        //initialize by setter
+        public void setName(string name)
+        {
+            this.name = name;
+        }
+
+        public void setId(int id)
+        {
+            this.id = id;
+        }
+
+        public void setSalary(double salary)
+        {
+            this.salary = salary;
+        }
+
+        //Access the value by getter
+
+        public string getName()
+        {
+            return name;
+        }
+
+        public int getId ()
+        {
+            return id; 
+        }
+
+        public double getSalary ()
+        {
+            return salary; 
+        }
+
+        void Display ()
+        {
+            Console.WriteLine("Name : " + name);
+            Console.WriteLine("Id : " + id);
+            Console.WriteLine("Salary : "+salary+"\n");
+        }
+
+        public void PrintInfo()
+        {
+            this.Display();
+        }
+    }
+
+    public class Program
+    {
+        public static void Main(string [] args)
+        {
+
+            string name = default;
+            int id = default;
+            double salary= default;
+
+            Person p1 = new Person();
+
+            Console.Write("Enter your name : ");
+            name = Console.ReadLine();
+            Console.Write("Enter your id : ");
+            id = int.Parse(Console.ReadLine());
+            Console.Write("Enter your salary : ");
+            salary = double.Parse(Console.ReadLine());
+
+            p1.setName(name);
+            p1.setId(id);
+            p1.setSalary(salary);
+
+            //manually print the values : 
+            Console.WriteLine("\n\nName is : "+p1.getName());  
+            Console.WriteLine("Id is : "+p1.getId());
+            Console.WriteLine("Salary is : " + p1.getSalary());
+
+            Console.WriteLine("\n\n");
+
+            //print values by method
+
+            p1.PrintInfo();
+
+            Console.ReadKey();
+
+            
+        }
+    }
+}

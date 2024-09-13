@@ -1,0 +1,48 @@
+
+using System;
+
+namespace Basic
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            int row, column;
+
+            Console.Write("Enter the row size : ");
+            row = int.Parse(Console.ReadLine());
+
+            Console.Write("Enter the column size : ");
+            column = int.Parse(Console.ReadLine());
+
+            int[,] arr = new int[row,column];
+
+            int i, j;
+
+            //input in 2D array :
+
+            for (i=0; i<arr.GetLength(0); i++)
+            {
+                for (j=0; j<arr.GetLength(1); j++)
+                {
+                    Console.Write($"Enter arr[{i},{j}] : ");
+                    arr[i,j] = int.Parse(Console.ReadLine());
+                }
+            }
+
+            //print the 2D array : 
+
+            for(i=0; i< arr.GetLength(0); i++)
+            {
+                for (j = 0; j < arr.GetLength(1); j++)
+                {
+                    Console.Write(" " + arr[i, j]);
+                }
+
+                Console.WriteLine();    
+            }
+
+            Console.ReadKey();  
+        }
+    }
+}

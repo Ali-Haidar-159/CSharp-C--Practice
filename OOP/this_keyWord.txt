@@ -1,0 +1,43 @@
+
+using System;
+
+namespace Basic
+{
+    class Person
+    {
+        public string name;
+        public int id;
+
+        public Person (string name)
+        {
+            this.name = name;
+        }
+
+        public Person (string name,int id) : this (name)
+        {
+            this.id = id;
+        }
+
+        public void Display()
+        {
+            Console.WriteLine("Name : " + name);
+            Console.WriteLine("Id : " + id + "\n\n");
+        }
+
+        public void PrintInfo()
+        {
+            this.Display(); 
+        }
+    }
+
+    public class Program
+    {
+        public static void Main (string [] args)
+        {
+            Person p1 = new Person("Ali Haidar" , 101);
+            p1.PrintInfo();
+
+            Console.ReadKey();
+        }
+    }
+}

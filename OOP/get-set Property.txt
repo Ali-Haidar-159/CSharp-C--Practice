@@ -1,0 +1,86 @@
+
+using System; 
+
+namespace Basic
+{
+    class Person
+    {
+        private string name = default ;
+        private int id = default;
+        private double salary = default ;
+
+        //value access by Properties 
+        public string ProName
+        {
+            set { this.name = value; }
+            get { return name; }
+        }
+
+        public int ProId
+        {
+            set { this.id = value; }
+            get { return id; }
+        }
+
+        public double ProSalary
+        {
+            set { this.salary = value; }
+            get { return salary; }
+        }
+
+        //method over loading : 
+        public void display ()
+        {
+            Console.WriteLine("Name : " + name);
+            Console.WriteLine("id : " + id);
+            Console.WriteLine("Salary : " + salary + "\n\n");
+        }
+
+        public void display (int numberOfObj)
+        {
+            Console.WriteLine("Person : " + numberOfObj);
+            this.display ();
+        }
+
+    }
+
+    public class Program
+    {
+        public static void Main (string [] args)
+        {
+            string name = default; 
+            int id = default , numberOfObj = default;
+            double salary = default ;
+
+            Console.Write("How many people : ");
+            numberOfObj = int.Parse(Console.ReadLine());
+            Console.WriteLine("\n");
+
+            for (int i = 0;i<numberOfObj; i++)
+            {
+                Person p = new Person();
+
+                Console.Write("Enter your name : ");
+                name = Console.ReadLine();
+                Console.Write("Enter your id : ");
+                id = int.Parse(Console.ReadLine());
+                Console.Write("Enter your salary : ");
+                salary = double.Parse(Console.ReadLine());
+
+                p.ProName = name;
+                p.ProSalary = salary;
+                p.ProId = id;
+
+                //print the values manually
+                Console.WriteLine("\n\nName is : " + p.ProName);
+                Console.WriteLine("Id is : " + p.ProId);
+                Console.WriteLine("Salary is : "+p.ProSalary+"\n"); 
+
+                //print the values using method
+                p.display (i+1);
+            }
+
+            Console.ReadKey();  
+        }
+    }
+}

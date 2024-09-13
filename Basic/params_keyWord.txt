@@ -1,0 +1,31 @@
+
+using System;
+using System.Runtime.InteropServices;
+
+namespace Basic
+{
+    public class Program
+    {
+        public static void Add (params int[]arr) //can receive different number of argument
+        {
+            int sum = 0;
+
+            foreach(int v in arr)
+            {
+                sum += v;
+            }
+
+            Console.WriteLine("The sum is : "+sum);
+        }
+
+        public static void Main (string[] args)
+        {
+            Add(5, 10, 20);
+            Add(5, 2, 4, 1);
+            Add(100, 20);
+
+
+            Console.ReadKey();
+        }
+    }
+}

@@ -1,0 +1,19 @@
+using System;
+
+namespace Basic
+{
+    public class Program
+    {
+        enum number
+        {
+            sat=3, sun, mon
+        }
+        public static void Main (string [] args)
+        { 
+            for (int i = 0; i <(int) number.mon ; i++)
+            {
+                Console.WriteLine ("Hello");
+            }
+        }
+    }
+}

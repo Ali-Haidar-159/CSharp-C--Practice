@@ -1,0 +1,20 @@
+using System;
+
+namespace Basic
+{
+    public class Program
+    {
+        public static void Method (double d , int x , char c)
+        {
+            Console.WriteLine($"double d = {d} \n int x = {x} \n char c");   
+        }
+
+        public static void Main (string[]args)
+        {             
+
+            Method (x: 5, c: 'A',d:10.5);
+
+            Console.ReadKey();
+        }
+    }
+}
